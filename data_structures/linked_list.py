@@ -162,57 +162,33 @@ class LinkedList:
 linked_list = LinkedList()
 
 print('Inserting 1 at head.')
-linked_list.insert_at_head(1)
+linked_list.insert_at_head(1)  # 1 -> END
 print(linked_list)
 
-print('Inserting 2 at head.')
-linked_list.insert_at_head(2)
+print('Inserting 2 at head.')  
+linked_list.insert_at_head(2)  # 2 -> 1 -> END
 print(linked_list)
 
-print('Inserting 3 at head.')
-linked_list.insert_at_head(3)
+print('Inserting 3 at head.')  
+linked_list.insert_at_head(3)  # 3 -> 2 -> 1 -> END
 print(linked_list)
 
-print('Inserting 4 at head.')
-linked_list.insert_at_head(4)
-print(linked_list)
-
-print('Inserting 5 at head.')
-linked_list.insert_at_head(5)
-print(linked_list)
-
-print('Inserting 6 at head.')
-linked_list.insert_at_head(6)
-print(linked_list)
-
-print('Inserting 6 at tail.')
-linked_list.insert_at_end(6)
+print('Inserting 6 at tail.')  
+linked_list.insert_at_end(6)  # 3 -> 2 -> 1 -> 6 -> END
 print(linked_list)
 
 print('Inserting 5 at tail.')
-linked_list.insert_at_end(5)
+linked_list.insert_at_end(5)  # 3 -> 2 -> 1 -> 6 -> 5 -> END
 print(linked_list)
 
 print('Inserting 4 at tail.')
-linked_list.insert_at_end(4)
+linked_list.insert_at_end(4)  # 3 -> 2 -> 1 -> 6 -> 5 -> 4 -> END
 print(linked_list)
 
-print('Inserting 3 at tail.')
-linked_list.insert_at_end(3)
-print(linked_list)
-
-print('Inserting 2 at tail.')
-linked_list.insert_at_end(2)
-print(linked_list)
-
-print('Inserting 1 at tail.')
-linked_list.insert_at_end(1)
-print(linked_list)
-
-print('Size is ' + str(linked_list.get_size()) + '\n')
+print('Size is ' + str(linked_list.get_size()) + '\n')  # Size is 6
 
 print('Sorting list by ascending order.')
-linked_list.sort()
+linked_list.sort()  # 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> END
 print(linked_list)
 
 
