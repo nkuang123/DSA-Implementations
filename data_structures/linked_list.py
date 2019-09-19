@@ -1,4 +1,4 @@
-# Implementation and complexity analysis of a Linked List data structure
+# Implementation and complexity analysis of a Singly Linked List 
 
 # Linked Lists are made up of nodes that consist of the data they are storing,
 # and a pointer reference to the next node in the list (could be None).
@@ -38,6 +38,11 @@ class LinkedList:
 
 		self.size += 1
 
+		# Complexity analysis: Insertion at the linked list means creating a
+		# new node with the given data argument, setting its next pointer
+		# to the current head, and making the head pointer of the linked list
+		# point to the newly created node, all of which take O(1) time.
+
 	def insert_at_end(self, data):
 		# We need to traverse to the last node of the list before adding.
 		ptr = self.head 
@@ -49,6 +54,12 @@ class LinkedList:
 		ptr.set_next(ListNode(data))
 
 		self.size += 1
+
+		# Complexity Analysis: Insertion at the end of the linked list requires
+		# that we traverse the entire list until we locate the last node, which
+		# takes O(n) time. This is because we do not keep a tail pointer in this
+		# implementation of a linked list. Thus, locating the tail node takes
+		# O(n) time, while the insertion operation takes O(1) time.
 
 	def delete(self, data):
 		# Special case: Node to be deleted is the first node of the list.
@@ -70,6 +81,12 @@ class LinkedList:
 		prev.set_next(ptr.get_next())
 
 		self.size -= 1
+
+		# Complexity Analysis: In the worst case, the node to be deleted is the
+		# last node, which means traversing the entire linked list to locate.
+		# The deletion process just manipulates the next pointer of the previous
+		# node, which is an O(1) operation. Therefore, locating the node takes
+		# O(n) time and the deletion process takes O(1).
 
 	def sort(self):
 		# Implemented using merge sort.
